@@ -17,7 +17,7 @@ struct GuideListView: View {
 //        NavigationView {
             GeometryReader { geo in
                 ScrollView {
-                    ForEach(0 ..< 10) { _ in
+                    ForEach(0 ..< 12) { _ in
                         NavigationLink {
                             GuideDetailView()
                         } label: {
@@ -36,8 +36,7 @@ struct GuideListView: View {
             }
             .padding(.horizontal, 16)
             .background(Color.backgroundGray)
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbarBackground(.visible, for: .navigationBar)
+
             .toolbar {
                 Button {
                     self.showOptionView = true

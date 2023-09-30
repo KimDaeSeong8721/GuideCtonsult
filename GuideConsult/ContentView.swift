@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var selection = 0
+    let navigationTitles = ["GUIDES","RESERVATION", "SETTINGS"]
     var body: some View {
      
         NavigationView {
-            TabView {
+            TabView(selection: $selection) {
                 GuideListView()
-                    .navigationTitle("가이드 찾기")
 
                 .tabItem {
                     Image(systemName: "magnifyingglass")
@@ -22,17 +23,21 @@ struct ContentView: View {
                         .padding(.top, 10)
                     Text("")
                   }
+                .tag(0)
 
-                 Text("Another Tab")
+                 ReservedHistoryView()
                   .tabItem {
                     Image(systemName: "book.fill")
                     Text("")
                   }
+                  .tag(1)
+
                 Text("The Last Tab")
                   .tabItem {
                     Image(systemName: "gear")
                     Text("")
                   }
+                  .tag(2)
                   .badge(10)
               }
             .tint(.point)
@@ -41,6 +46,9 @@ struct ContentView: View {
                 tabBarAppearance.configureWithDefaultBackground()
                 UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
             }
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(.visible, for: .navigationBar)
+            .navigationTitle(navigationTitles[selection])
         }
         .background(.black)
 

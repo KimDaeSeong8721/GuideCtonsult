@@ -11,7 +11,7 @@ struct SearhOptionView: View {
 
     //MARK: - Properties
     @State var isOn = false
-    let languages = ["영어", "프랑스어", "스페인어", "독일어"]
+    let languages = ["English", "French", "Spanish", "German"]
     @State var selectedLanguage: String? = nil
     
     @Environment(\.presentationMode) var presentationMode
@@ -30,18 +30,18 @@ struct SearhOptionView: View {
                     }
                     Spacer()
                 }
-                Text("검색 옵션")
+                Text("SEARCH OPTION")
                     .font(.system(size: 20,weight: .semibold))
             }
             
             // 여행지
             VStack(alignment: .leading, spacing: 16) {
-                Text("여행지")
+                Text("Travel Place")
                     .font(.title3)
                 VStack(spacing: 12) {
                     //나라
                     HStack {
-                        Text("나라")
+                        Text("Country")
                             .opacity(0.8)
                         Spacer()
                         HStack {
@@ -54,7 +54,7 @@ struct SearhOptionView: View {
                     .font(.callout)
                     //도시
                     HStack {
-                        Text("도시")
+                        Text("City")
                             .opacity(0.8)
                         Spacer()
                         HStack {
@@ -72,7 +72,7 @@ struct SearhOptionView: View {
             Divider()
             // 가이드 언어
             VStack(alignment: .leading, spacing: 16) {
-                Text("가이드 언어")
+                Text("Guide Language")
                     .font(.title3)
                 
                 ForEach(languages, id: \.self) { lang in
@@ -81,7 +81,7 @@ struct SearhOptionView: View {
                 }
             }
             Spacer()
-            ButtonView(title: "검색",height: 48)
+            ButtonView(title: "SEARCH",titleSize: 18)
         }
         .padding(.horizontal,16)
         

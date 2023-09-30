@@ -23,6 +23,8 @@
 		3551E2B32AB3569E00ED9EB8 /* BoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3551E2B22AB3569E00ED9EB8 /* BoxView.swift */; };
 		358C8DCF2AB0CC7C005FA5A8 /* LanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358C8DCE2AB0CC7C005FA5A8 /* LanguageCell.swift */; };
 		358C8DD12AB1FC94005FA5A8 /* GuideDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358C8DD02AB1FC94005FA5A8 /* GuideDetailView.swift */; };
+		35BBC5E62AC7F20100330A15 /* ReservedHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BBC5E52AC7F20100330A15 /* ReservedHistoryView.swift */; };
+		35BBC5E82AC7F49800330A15 /* ReservedHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BBC5E72AC7F49800330A15 /* ReservedHistoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		3551E2B22AB3569E00ED9EB8 /* BoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxView.swift; sourceTree = "<group>"; };
 		358C8DCE2AB0CC7C005FA5A8 /* LanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCell.swift; sourceTree = "<group>"; };
 		358C8DD02AB1FC94005FA5A8 /* GuideDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideDetailView.swift; sourceTree = "<group>"; };
+		35BBC5E52AC7F20100330A15 /* ReservedHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservedHistoryView.swift; sourceTree = "<group>"; };
+		35BBC5E72AC7F49800330A15 /* ReservedHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservedHistoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				3551E2B02AB31D8600ED9EB8 /* ReservationView.swift */,
+				35BBC5E52AC7F20100330A15 /* ReservedHistoryView.swift */,
+				35BBC5E72AC7F49800330A15 /* ReservedHistoryCell.swift */,
 			);
 			path = Reservation;
 			sourceTree = "<group>";
@@ -238,10 +244,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3551E2B32AB3569E00ED9EB8 /* BoxView.swift in Sources */,
+				35BBC5E62AC7F20100330A15 /* ReservedHistoryView.swift in Sources */,
 				351592D42AAF7F1C0053D126 /* GuideListCell.swift in Sources */,
 				351592D62AB017070053D126 /* SearhOptionView.swift in Sources */,
 				351592C62AAF27F50053D126 /* StartView.swift in Sources */,
 				351592CD2AAF72C90053D126 /* AuthView.swift in Sources */,
+				35BBC5E82AC7F49800330A15 /* ReservedHistoryCell.swift in Sources */,
 				358C8DD12AB1FC94005FA5A8 /* GuideDetailView.swift in Sources */,
 				351592D22AAF7EB20053D126 /* GuideListView.swift in Sources */,
 				351592D92AB01B9F0053D126 /* CheckboxToggleStyle.swift in Sources */,

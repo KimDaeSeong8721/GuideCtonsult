@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ButtonView: View {
     let title: String
+    var titleSize: CGFloat = 16
     var height: CGFloat? = 56.0
     var body: some View {
         
@@ -20,7 +21,7 @@ struct ButtonView: View {
                     .cornerRadius(15)
                 
                 Text(title)
-                    .font(.system(size: 16, weight: .semibold))
+                    .font(.system(size: titleSize, weight: .semibold))
                     .foregroundColor(.white)
             }
             .frame(minWidth: geo.size.width, maxHeight: height)

@@ -26,10 +26,6 @@ struct GuideDetailView: View {
                     Spacer()
                 }
                 Form {
-                    //                    VStack(alignment: .leading, spacing: 24) {
-                    
-                    
-                    
                     // MARK: - Profile
                     Section {
                         VStack(alignment: .leading, spacing: 5) {
@@ -140,12 +136,11 @@ struct GuideDetailView: View {
                     .padding(.leading, -16)
                     .foregroundColor(.black)
                 }
-                    Spacer()
                 }
                 
                 Spacer()
                 
-                //MARK: - 하단 바
+                //MARK: - Bottom Bar
                 VStack {
                     
                     HStack {
@@ -162,7 +157,7 @@ struct GuideDetailView: View {
                         NavigationLink(destination: {
                             ReservationView()
                         }, label: {
-                            ButtonView(title: "일정 선택", height: 50)
+                            ButtonView(title: "Choose Schedule",titleSize: 18, height: 50)
                         })
                         .frame(maxWidth: .infinity)
                         
@@ -184,7 +179,7 @@ struct GuideDetailView: View {
             }
         }
         .background(Color.backgroundGray)
-        .navigationTitle("가이드 페이지")
+        .navigationTitle("GUIDE INFO")
         .toolbarBackground(.visible, for: .navigationBar)
         .toolbarRole(.editor)
     }
