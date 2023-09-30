@@ -32,7 +32,7 @@ struct ContentView: View {
                   }
                   .tag(1)
 
-                Text("The Last Tab")
+                SettingView()
                   .tabItem {
                     Image(systemName: "gear")
                     Text("")

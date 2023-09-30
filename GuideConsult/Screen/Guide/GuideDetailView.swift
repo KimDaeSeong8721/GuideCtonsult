@@ -23,8 +23,19 @@ struct GuideDetailView: View {
                         .frame(width: 180, height: 180)
                         .scaledToFill()
                         .padding(.top,24)
+                        .overlay(alignment: .bottomTrailing) {
+                            Image("koreaFlag")
+                                .resizable()
+                                .frame(width: 40, height: 40)
+                                .overlay(RoundedRectangle(cornerRadius: 20
+                                                         )
+                                        .stroke(.black.opacity(0.4), lineWidth: 0.5))
+                                .offset(x: 20, y: 10)
+
+                        }
                     Spacer()
                 }
+                .padding(.bottom, 5)
                 Form {
                     // MARK: - Profile
                     Section {

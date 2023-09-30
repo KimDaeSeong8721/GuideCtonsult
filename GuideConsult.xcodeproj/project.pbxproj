@@ -25,6 +25,7 @@
 		358C8DD12AB1FC94005FA5A8 /* GuideDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358C8DD02AB1FC94005FA5A8 /* GuideDetailView.swift */; };
 		35BBC5E62AC7F20100330A15 /* ReservedHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BBC5E52AC7F20100330A15 /* ReservedHistoryView.swift */; };
 		35BBC5E82AC7F49800330A15 /* ReservedHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BBC5E72AC7F49800330A15 /* ReservedHistoryCell.swift */; };
+		35BBC5EB2AC7F95700330A15 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BBC5EA2AC7F95700330A15 /* SettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		358C8DD02AB1FC94005FA5A8 /* GuideDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideDetailView.swift; sourceTree = "<group>"; };
 		35BBC5E52AC7F20100330A15 /* ReservedHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservedHistoryView.swift; sourceTree = "<group>"; };
 		35BBC5E72AC7F49800330A15 /* ReservedHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservedHistoryCell.swift; sourceTree = "<group>"; };
+		35BBC5EA2AC7F95700330A15 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		351592C02AAF25EF0053D126 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				35BBC5E92AC7F94F00330A15 /* Settings */,
 				351592C42AAF27BD0053D126 /* Reservation */,
 				351592C32AAF27980053D126 /* Guide */,
 				351592C22AAF277B0053D126 /* SignUp */,
@@ -171,6 +174,14 @@
 				351592D82AB01B9F0053D126 /* CheckboxToggleStyle.swift */,
 			);
 			path = Struct;
+			sourceTree = "<group>";
+		};
+		35BBC5E92AC7F94F00330A15 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				35BBC5EA2AC7F95700330A15 /* SettingView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +263,7 @@
 				35BBC5E82AC7F49800330A15 /* ReservedHistoryCell.swift in Sources */,
 				358C8DD12AB1FC94005FA5A8 /* GuideDetailView.swift in Sources */,
 				351592D22AAF7EB20053D126 /* GuideListView.swift in Sources */,
+				35BBC5EB2AC7F95700330A15 /* SettingView.swift in Sources */,
 				351592D92AB01B9F0053D126 /* CheckboxToggleStyle.swift in Sources */,
 				351592D02AAF7CC10053D126 /* ButtonView.swift in Sources */,
 				351592B52AAF256A0053D126 /* ContentView.swift in Sources */,
