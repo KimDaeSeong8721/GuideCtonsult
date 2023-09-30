@@ -15,81 +15,87 @@ struct GuideDetailView: View {
     var body: some View {
         GeometryReader { geo in
             VStack {
-                ScrollView {
-                    VStack(alignment: .leading, spacing: 24) {
-                        
-                        // MARK: - ProfileImage
-                        HStack(alignment: .center) {
-                            Spacer()
-                            Image("profile")
-                                .resizable()
-                                .frame(width: 180, height: 180)
-                                .padding(.top,24)
-                            Spacer()
-                        }
-                        
-                        // MARK: - Profile
+                // MARK: - ProfileImage
+                HStack(alignment: .center) {
+                    Spacer()
+                    Image("profile")
+                        .resizable()
+                        .frame(width: 180, height: 180)
+                        .scaledToFill()
+                        .padding(.top,24)
+                    Spacer()
+                }
+                Form {
+                    //                    VStack(alignment: .leading, spacing: 24) {
+                    
+                    
+                    
+                    // MARK: - Profile
+                    Section {
                         VStack(alignment: .leading, spacing: 5) {
-                            Text("Profile")
-                                .font(.system(size: 16, weight: .semibold))
-                                .padding(.leading, 8)
-                            
-                            VStack(alignment: .leading, spacing: 5) {
-                                ForEach(0 ..< 4) { i in
-                                    HStack {
-                                        Text(profileElements[i])
-                                            .fontWeight(.semibold)
-                                        Text(profileEleContents[i])
-                                        Spacer()
-                                    }
-                                }
-                            }
-                            .padding(8)
-                            .font(.system(size: 14))
-                            .background(.white)
-                            .cornerRadius(10)
-                        }
-                        
-                        // MARK: - Introduce
-                        VStack(alignment: .leading, spacing: 5) {
-                            Text("Introduce")
-                                .font(.system(size: 16, weight: .semibold))
-                                .padding(.leading, 8)
-                            
-                            VStack(alignment: .leading, spacing: 5) {
+                            ForEach(0 ..< 4) { i in
                                 HStack {
-                                    Text("Hi my name is Alex I lived in Seoul dobongu.Hi my name is Alex I lived in Seoul dobongu.")
-                                        .fixedSize(horizontal: false, vertical: true) // 이해 안감
-                                    Spacer()
-                                }
-                                Text("\n")
-                                HStack {
-                                    Text("#NightView #Dobongu #Landscape")
-                                        .opacity(0.6)
+                                    Text(profileElements[i])
+                                        .fontWeight(.semibold)
+                                    Text(profileEleContents[i])
                                     Spacer()
                                 }
                             }
-                            .padding(8)
-                            .font(.system(size: 14))
-                            .background(.white)
-                            .cornerRadius(10)
-                            
                         }
-                        
-                        
-                        // MARK: - Review
+                        .font(.system(size: 14))
+                    }
+                header: {
+                    Text("Profile")
+                        .font(.system(size: 16, weight: .semibold))
+                        .padding(.leading, -16)
+                        .foregroundColor(.black)
+                }
+                    
+                    // MARK: - Introduce
+                    Section {
                         VStack(alignment: .leading, spacing: 5) {
-                            
                             HStack {
-                                Text("Review")
-                                    .font(.system(size: 16, weight: .semibold))
-                                    .padding(.leading, 8)
-                                
-                                Text("⭐ 4.5 (+999)")
-                                    .font(.system(size: 12))
-                                    .opacity(0.6)
+                                Text("Hi my name is Alex I lived in Seoul dobongu.Hi my name is Alex I lived in Seoul dobongu.")
+                                    .fixedSize(horizontal: false, vertical: true) // 이해 안감
+                                Spacer()
                             }
-                            
+                            Text("\n")
+                            HStack {
+                                Text("#NightView #Dobongu #Landscape")
+                                    .opacity(0.6)
+                                Spacer()
+                            }
+                        }
+                        .font(.system(size: 14))
+                    }
+                header: {
+                    Text("Introduce")
+                        .font(.system(size: 16, weight: .semibold))
+                        .padding(.leading, -16)
+                        .foregroundColor(.black)
+                    
+                }
+                    
+                    // MARK: - Meeting Place
+                    Section {
+                        VStack(alignment: .leading, spacing: 5) {
+                            HStack {
+                                Text("Dobongu station 1st")
+                                    .fixedSize(horizontal: false, vertical: true) // 이해 안감
+                                Spacer()
+                            }
+                        }
+                        .font(.system(size: 14))
+                    }
+                header: {
+                    Text("Meeting Place")
+                        .font(.system(size: 16, weight: .semibold))
+                        .padding(.leading, -16)
+                        .foregroundColor(.black)
+                    
+                }
+                    // MARK: - Review
+                    Section {
                             VStack(alignment: .leading, spacing: 5) {
                                 
                                 HStack {
@@ -103,7 +109,7 @@ struct GuideDetailView: View {
                                             .opacity(0.6)
                                         Text("It was good. It was good.It was good.It was good.It was good.")
                                             .fixedSize(horizontal: false, vertical: true)
-
+                                        
                                     }
                                     .padding(.bottom, 24)
                                 }
@@ -119,20 +125,27 @@ struct GuideDetailView: View {
                                                 .stroke(Color.black.opacity(0.6), lineWidth: 1))
                                 }
                             }
-                            .padding(12)
                             .font(.system(size: 14))
-                            .background(.white)
-                            .cornerRadius(10)
                             
-                        }
-                        Spacer()
                     }
-                    .padding(.horizontal,16)
-                    .frame(width: geo.size.width, height: geo.size.height)
-                    
+                header: {
+                    HStack {
+                        Text("Review")
+                            .font(.system(size: 16, weight: .semibold))
+                        
+                        Text("⭐ 4.5 (+999)")
+                            .font(.system(size: 12))
+                            .opacity(0.6)
+                    }
+                    .padding(.leading, -16)
+                    .foregroundColor(.black)
+                }
+                    Spacer()
                 }
                 
                 Spacer()
+                
+                //MARK: - 하단 바
                 VStack {
                     
                     HStack {
