@@ -14,7 +14,7 @@ struct GuideListView: View {
     
     //MARK: - Body
     var body: some View {
-        NavigationView {
+//        NavigationView {
             GeometryReader { geo in
                 ScrollView {
                     ForEach(0 ..< 10) { _ in
@@ -36,7 +36,6 @@ struct GuideListView: View {
             }
             .padding(.horizontal, 16)
             .background(Color.backgroundGray)
-            .navigationTitle("가이드 찾기")
             .navigationBarTitleDisplayMode(.inline)
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbar {
@@ -49,9 +48,10 @@ struct GuideListView: View {
                     SearhOptionView()
                 }
             }
+                .accentColor(.black)
+
         }
-        .accentColor(.black)
-    }
+//    }
 }
 
 struct GuideListView_Previews: PreviewProvider {
