@@ -45,8 +45,18 @@ struct SettingView: View {
                     Text("DAESEONG KIM")
                         .font(.system(size: 18))
                     
-                    ButtonView(title: "EDIT PROFILE", titleSize:14, height: 24)
+                NavigationLink {
+                    if !isGuide {
+                        TravelerProfileView()
+                    } else {
+                        GuideProfileView()
+                    }
+                } label: {
+                    ButtonView(title: "MY PROFILE", titleSize:14, height: 24)
                         .frame(width: 168)
+                }
+
+                   
                 }
                 VStack(spacing: 16) {
                     
