@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct SettingView: View {
-    @State var isGuide = false
+    @AppStorage("isGuide") var isGuide = false
+    
     @State var isNotiOn = true
     
     var body: some View {
