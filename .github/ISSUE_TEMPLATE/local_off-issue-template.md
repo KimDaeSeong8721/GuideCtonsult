@@ -1,7 +1,7 @@
 ---
-name: "[FEAT]"
-about: Local_off
-title: ''
+name: Local_off issue template
+about: Local_off 기본 이슈 템플릿
+title: "[FEAT]"
 labels: ''
 assignees: ''
 
